@@ -11,6 +11,10 @@ export default async function TipsPage() {
   return (
     <main className="container">
       <h1>TODOのコツ</h1>
+      <h2>今日のおすすめ</h2>
+
+      <p>{pickTip(tips, new Date().getDay()).text}</p>
+
       <ol>
         {tips.map((tip) => (
           <li key={tip.id}>{tip.text}</li>
